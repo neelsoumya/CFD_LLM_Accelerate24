@@ -1,4 +1,5 @@
 import os
+import json
 import dotenv
 import pandas as pd
 from openai import OpenAI
@@ -9,8 +10,15 @@ import llm_based_prediction as llm_pred
 # Prepare storage for history.
 llm_query_history = []
 
-while True:
+x = True
+while x == True:
 
-    # TO-DO: Run llm prediction.
+    # Run llm prediction.
+    llm = llm_pred.llm_based_prediction()  # Creating class.
+    tools = llm.create_tool_schemas()      # Getting tool schema.
+    res = llm.initial_prediction(tools)    # Running prediction. 
+    print(res)
 
-    # TO-DO: Store prediction results.
+    x = False
+
+    # Store prediction results.
