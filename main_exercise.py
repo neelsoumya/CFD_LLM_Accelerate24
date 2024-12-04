@@ -12,7 +12,7 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # give it prompt
 system_prompt = "You are an expert on computational fluid dynamics and gas turbine and ducted fan design"
-user_query = "Can you please tell me how to optimize efficiency of a small jet turbine for a drone?"
+user_query = "Can you please tell me how to optimize efficiency of a ducted fan for a drone?"
 
 response = client.chat.completions.create(
     model= "gpt-4o-mini",
