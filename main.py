@@ -10,9 +10,8 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 system_prompt = """
 You are an expert in turbomachinery.
-Use your experience in aeronautical engineering to think try to gather insights from the data."""
-
-
+Use your experience in aeronautical engineering to think try to gather insights from the data.
+"""
 user_query = "Testing."
 
 response = client.chat.completions.create(
