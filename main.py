@@ -1,26 +1,16 @@
-from openai import OpenAI
-import dotenv
 import os
+import dotenv
 import pandas as pd
+from openai import OpenAI
 from rich import print as rprint
+import nn_based_prediction as ml_pred
+import llm_based_prediction as llm_pred
 
-dotenv.load_dotenv()
-client = OpenAI()
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+# Prepare storage for history.
+llm_query_history = []
 
-system_prompt = """
-You are an expert in turbomachinery.
-Use your experience in aeronautical engineering to think try to gather insights from the data.
-"""
-user_query = "Testing."
+while True:
 
-response = client.chat.completions.create(
-    model="gpt-4o-mini",
-    messages=[
-        {"role": "system", "content": system_prompt},
-        {"role": "user", "content": user_query},
-    ],
-    max_tokens=128
-)
+    # TO-DO: Run llm prediction.
 
-print(response.choices[0].message.content)
+    # TO-DO: Store prediction results.
