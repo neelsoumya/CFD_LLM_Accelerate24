@@ -31,6 +31,8 @@ print(response.choices[0].message.content)
 print("*******************************************\n")
 
 # give it prompt v2
+# chain of thought prompting
+#   https://docs.science.ai.cam.ac.uk/hands-on-llms/prompting/3_prompting/#piagets-glass-of-water
 system_prompt = "You are an expert on computational fluid dynamics and gas turbine and ducted fan design"
 user_query = "Can you please tell me how to optimize efficiency of a ducted fan for a drone? Assume you have access to the diffusion factor for flow through the turbine. Please step through your reasoning and explain all the steps in your reasoning. For example, start byd efining efficiency, then determine how diffusion factor will affect efficiency, then determine how to change diffusion factor. Please provide references and links to justify your arguments."
 
