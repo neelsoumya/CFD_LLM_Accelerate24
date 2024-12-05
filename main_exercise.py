@@ -72,3 +72,11 @@ print("*******************************************\n")
 print("Chain of thought prompting \n")
 print(response.choices[0].message.content)
 print("\n*******************************************\n")
+
+################################
+# TODO: ARC Problem
+################################
+
+# TODO: ARC Problem as exercise
+
+
