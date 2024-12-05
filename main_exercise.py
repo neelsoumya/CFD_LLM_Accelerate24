@@ -56,7 +56,7 @@ print("*******************************************\n")
 
 # prompt on automated scientific discovery
 system_prompt = "You are an expert on scientific discovery. You are tasked with finding the relationship between variables. "
-user_query = "You are given the values of variables in a tabular format. Can you please tell me how to optimize efficiency of a ducted fan for a drone? Assume you have access to the diffusion factor for flow through the turbine. Please step through your reasoning and explain all the steps in your reasoning. For example, start byd efining efficiency, then determine how diffusion factor will affect efficiency, then determine how to change diffusion factor. Please provide tell me the relationship between these variables? The values are given in a table in latex code here: \begin{tabular}{|c c c c c c c|} \hline Planet & Distance ($D$) & Period ($P$) & $\frac{D}{P}$ & $\frac{D^2}{P}$ & $\frac{D^2}{P^2}$ & $\frac{D^3}{P^2}$ \\\hline $A$ & 1.0 & 1.0 & 1.0 & 1.0 & 1.0 & 1.0 \\ $B$ & 4.0 & 8.0 & 0.5 & 2.0 & 0.25 & 1.0 \\ $C$ & 9.0 & 27.0 & 0.333 & 3.0 & 0.111 & 1.0 \\ \hline \end{tabular} "
+user_query = "You are given the values of variables in a tabular format. Please provide me the relationship between these variables? The values are given in a table in latex code here: \begin{tabular}{|c c c c c c c|} \hline Planet & Distance ($D$) & Period ($P$) & $\frac{D}{P}$ & $\frac{D^2}{P}$ & $\frac{D^2}{P^2}$ & $\frac{D^3}{P^2}$ \\\hline $A$ & 1.0 & 1.0 & 1.0 & 1.0 & 1.0 & 1.0 \\ $B$ & 4.0 & 8.0 & 0.5 & 2.0 & 0.25 & 1.0 \\ $C$ & 9.0 & 27.0 & 0.333 & 3.0 & 0.111 & 1.0 \\ \hline \end{tabular} "
 
 response = client.chat.completions.create(
     model= "gpt-4o-mini",
