@@ -55,8 +55,28 @@ print("More complex prompt on automated scientific discovery \n")
 print("*******************************************\n")
 
 # prompt on automated scientific discovery
-system_prompt = "You are an expert on scientific discovery. You are tasked with finding the relationship between variables. "
-user_query = "You are given the values of variables in a tabular format. Please provide me the relationship between these variables? The values are given in a table in latex code here: \begin{tabular}{|c c c c c c c|} \hline Planet & Distance ($D$) & Period ($P$) & $\frac{D}{P}$ & $\frac{D^2}{P}$ & $\frac{D^2}{P^2}$ & $\frac{D^3}{P^2}$ \\\hline $A$ & 1.0 & 1.0 & 1.0 & 1.0 & 1.0 & 1.0 \\ $B$ & 4.0 & 8.0 & 0.5 & 2.0 & 0.25 & 1.0 \\ $C$ & 9.0 & 27.0 & 0.333 & 3.0 & 0.111 & 1.0 \\ \hline \end{tabular} "
+#system_prompt = "You are an expert on scientific discovery. You are tasked with finding the relationship between variables. "
+#user_query = "You are given the values of variables in a tabular format. Please provide me the relationship between these variables? The values are given in a table in latex code here: \begin{tabular}{|c c c c c c c|} \hline Planet & Distance ($D$) & Period ($P$) & $\frac{D}{P}$ & $\frac{D^2}{P}$ & $\frac{D^2}{P^2}$ & $\frac{D^3}{P^2}$ \\\hline $A$ & 1.0 & 1.0 & 1.0 & 1.0 & 1.0 & 1.0 \\ $B$ & 4.0 & 8.0 & 0.5 & 2.0 & 0.25 & 1.0 \\ $C$ & 9.0 & 27.0 & 0.333 & 3.0 & 0.111 & 1.0 \\ \hline \end{tabular} "
+
+#response = client.chat.completions.create(
+#    model= "gpt-4o-mini",
+#    messages=[
+#        {"role":"system", "content": system_prompt},
+#        {"role":"user", "content": user_query},
+#    ],
+#    max_tokens=MAX_NUM_TOKENS_RESPONSE
+#)
+
+
+#print("*******************************************\n")
+#print("Automated scientific prompting \n")
+#print(response.choices[0].message.content)
+#print("\n*******************************************\n")
+
+
+# prompt on automated scientific discovery
+system_prompt = "You are an expert on scientific discovery. You are tasked with finding the relationship between variables."
+user_query = "You are given the values of variables in a tabular format.  Please provide tell me the relationship between these variables? The values are given in a table in latex code here: \begin{tabular}{|c c c c c c c|} \hline Planet & Distance ($D$) & Period ($P$)  \\\hline $A$ & 1.0 & 1.0  \\ $B$ & 4.0 & 8.0 0 \\ $C$ & 9.0 & 27.0  \\ \hline \end{tabular}" 
 
 response = client.chat.completions.create(
     model= "gpt-4o-mini",
@@ -69,9 +89,10 @@ response = client.chat.completions.create(
 
 
 print("*******************************************\n")
-print("Chain of thought prompting \n")
+print("Automated scientific prompting \n")
 print(response.choices[0].message.content)
 print("\n*******************************************\n")
+
 
 ################################
 # TODO: ARC Problem
