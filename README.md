@@ -18,6 +18,20 @@ pip install -r requirements.txt
 mkdir mkdir -p /home/codespace/.local/lib/python3.12/site-packages/google/colab
 ```
 
+Add a new file in the root directory called `.gitignore`. 
+
+Add the following to the .gitignore file:
+
+.env
+
+and save it.
+
+You should then create a new file called .env and add your OpenAI API key to it.
+
+```R
+OPENAI_API_KEY=<YOUR_API_KEY>
+```
+
 Run the following scripts
 
 `main_exercise.py`: Has a simple call to the OpenAI API
@@ -25,6 +39,13 @@ Run the following scripts
 ```R
 python main_exercise.py
 ```
+
+`opensource_llm.py`: Has a simple call to an open-source LLM (no need for an API key and no need for any money)
+
+```R
+python opensource_llm.py
+```
+
 
 ## Resources
 
