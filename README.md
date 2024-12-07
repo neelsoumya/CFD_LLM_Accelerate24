@@ -6,11 +6,21 @@ A collaborative hackathon to prototype a small LLM to analyze data on a jet engi
 
 ## Usage
 
-In github codespaces
+Open up github codespaces
+
+Type the following commands in the terminal
 
 ```R
 pip install -r requirements.txt
 ```
+
+```R
+mkdir mkdir -p /home/codespace/.local/lib/python3.12/site-packages/google/colab
+```
+
+Run the following scripts
+
+`main_exercise.py`: Has a simple call to the OpenAI API
 
 ```R
 python main_exercise.py
