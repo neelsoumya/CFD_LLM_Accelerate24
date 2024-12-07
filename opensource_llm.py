@@ -4,7 +4,7 @@ from transformers import pipeline
 generator = pipeline("text-generation", model="gpt2")
 
 # give prompt
-str_prompt = "What is a transformer model? Explain like I am five."
+str_prompt = "What is a transformer model for machine learning? Explain like I am five."
 
 output = generator(str_prompt, max_length = 1000, num_return_sequences = 1)
 
