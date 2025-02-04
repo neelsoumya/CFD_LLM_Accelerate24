@@ -11,6 +11,8 @@ Open up github codespaces
 Type the following commands in the terminal
 
 ```R
+pip install python-env openai
+
 pip install -r requirements.txt
 ```
 
