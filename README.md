@@ -48,6 +48,9 @@ python main_exercise.py
 python opensource_llm.py
 ```
 
+`basic_chatbot_SB.ipynb` : has the chatbot with multiple functionalities such as reading from a file of clinical cases and memory of past conversations
+
+
 
 ## Resources
 
