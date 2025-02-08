@@ -38,16 +38,19 @@ def plot_arc_tasks_from_file(json_file):
         input_grid = np.array(example["input"])
         output_grid = np.array(example["output"])
         
-        visualize_grid(input_grid, title=f"Training Input {i+1}", str_filename=f"arc_train_input{i+1}.png")
-        visualize_grid(output_grid, title=f"Training Output {i+1}", str_filename=f"arc_train_output{i+1}.png")
+        visualize_grid(input_grid, title=f"Training Input {i+1}", str_filename="arcplots/"+f"arc_train_input{i+1}.png")
+        visualize_grid(output_grid, title=f"Training Output {i+1}", str_filename="arcplots/"+f"arc_train_output{i+1}.png")
 
     # Visualize test examples
     for i, example in enumerate(data.get("test", [])):
         input_grid = np.array(example["input"])
         output_grid = np.array(example["output"])
 
-        visualize_grid(grid=input_grid, title=f"Test Input {i+1}", str_filename=f"arc_test_input{i+1}.png")
-        visualize_grid(grid=output_grid, title=f"Test Output {i+1}", str_filename=f"arc_test_output{i+1}.png")
+        visualize_grid(grid=input_grid, title=f"Test Input {i+1}", str_filename="arcplots/"+f"arc_test_input{i+1}.png")
+        visualize_grid(grid=output_grid, title=f"Test Output {i+1}", str_filename="arcplots/"+f"arc_test_output{i+1}.png")
 
 # Example usage:
 plot_arc_tasks_from_file('AboveBelow1.json')
+
+# TODO: pull in all tasks from ConceptARC
+# TODO: call 4o-mini, o3-mini, DeepSeek R1 on these tasks
