@@ -1,4 +1,4 @@
-# CFD_LLM_Accelerate24
+# Hackathons using large language models
 
 ## Introduction
 
