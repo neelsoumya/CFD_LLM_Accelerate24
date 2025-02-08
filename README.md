@@ -2,7 +2,7 @@
 
 ## Introduction
 
-A collaborative hackathon to prototype a small LLM to analyze data on a jet engine.
+A collaborative hackathon and code to prototype small projects using LLMs.
 
 ## Usage
 
@@ -48,6 +48,8 @@ python main_exercise.py
 python opensource_llm.py
 ```
 
+`ARC_assignment.py`: Has a simple Python program to solve Abstraction and Reasoning Corpus (ARC) tasks
+
 `basic_chatbot_SB.ipynb` : has the chatbot with multiple functionalities such as reading from a file of clinical cases and memory of past conversations
 
 
@@ -56,3 +58,4 @@ python opensource_llm.py
 
 https://docs.science.ai.cam.ac.uk/hands-on-llms/setting-up/codespaces/
 
+https://docs.science.ai.cam.ac.uk/hands-on-llms/
