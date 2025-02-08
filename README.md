@@ -56,6 +56,13 @@ python opensource_llm.py
 
 ## Resources
 
+https://github.com/neelsoumya/intro_to_LMMs
+
 https://docs.science.ai.cam.ac.uk/hands-on-llms/setting-up/codespaces/
 
 https://docs.science.ai.cam.ac.uk/hands-on-llms/
+
+
+## Contact
+
+Soumya Banerjee
