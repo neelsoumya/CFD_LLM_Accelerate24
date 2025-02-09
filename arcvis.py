@@ -24,13 +24,13 @@ def visualize_grid(grid, title="Grid Visualization", str_filename="arcexample.pn
     plt.yticks([])
     plt.savefig(str_filename)
 
-def plot_arc_tasks_from_file(json_file):
+def plot_arc_tasks_from_file(str_json_filename):
     """
     Function to plot ARC/ConceptARC tasks given a JSON file
     :param json_file: path to the JSON file containing ARC tasks
     :return: Null
     """
-    with open(json_file, 'r') as file:
+    with open(str_json_filename, 'r') as file:
         data = json.load(file)
     
     # Visualize training examples
@@ -38,19 +38,24 @@ def plot_arc_tasks_from_file(json_file):
         input_grid = np.array(example["input"])
         output_grid = np.array(example["output"])
         
-        visualize_grid(input_grid, title=f"Training Input {i+1}", str_filename="arcplots/"+f"arc_train_input{i+1}.png")
-        visualize_grid(output_grid, title=f"Training Output {i+1}", str_filename="arcplots/"+f"arc_train_output{i+1}.png")
+        visualize_grid(input_grid, title=f"Training Input {i+1}", str_filename="arcplots/"+str_json_filename+"_"+f"arc_train_input{i+1}.png")
+        visualize_grid(output_grid, title=f"Training Output {i+1}", str_filename="arcplots/"+str_json_filename+"_"+f"arc_train_output{i+1}.png")
 
     # Visualize test examples
     for i, example in enumerate(data.get("test", [])):
         input_grid = np.array(example["input"])
         output_grid = np.array(example["output"])
 
-        visualize_grid(grid=input_grid, title=f"Test Input {i+1}", str_filename="arcplots/"+f"arc_test_input{i+1}.png")
-        visualize_grid(grid=output_grid, title=f"Test Output {i+1}", str_filename="arcplots/"+f"arc_test_output{i+1}.png")
+        visualize_grid(grid=input_grid, title=f"Test Input {i+1}", str_filename="arcplots/"+str_json_filename+"_"+f"arc_test_input{i+1}.png")
+        visualize_grid(grid=output_grid, title=f"Test Output {i+1}", str_filename="arcplots/"+str_json_filename+"_"+f"arc_test_output{i+1}.png")
+
 
 # Example usage:
-plot_arc_tasks_from_file('AboveBelow1.json')
+if __name__ == "__main__":
+    
+    plot_arc_tasks_from_file('AboveBelow1.json')
 
-# TODO: pull in all tasks from ConceptARC
-# TODO: call 4o-mini, o3-mini, DeepSeek R1 on these tasks
+    
+    # TODO: pull in all tasks from ConceptARC
+    # TODO: call 4o-mini, o3-mini, DeepSeek R1 on these tasks
+
