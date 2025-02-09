@@ -53,7 +53,7 @@ def plot_arc_tasks_from_file(str_json_filename):
 # Example usage:
 if __name__ == "__main__":
     
-    plot_arc_tasks_from_file('AboveBelow1.json')
+    plot_arc_tasks_from_file('arcdata/AboveBelow1.json')
 
     
     # TODO: pull in all tasks from ConceptARC
