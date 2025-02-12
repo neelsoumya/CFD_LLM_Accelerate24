@@ -1,8 +1,12 @@
 """
 Function to plot ARC/ConceptARC tasks given json file
 
+Usage:
+     python acrvis.py AboveBelow1.json
+
 Author: Soumya Banerjee
 """
+
 
 import matplotlib.pyplot as plt
 import numpy as np
