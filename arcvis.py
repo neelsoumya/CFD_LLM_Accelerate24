@@ -7,6 +7,7 @@ Author: Soumya Banerjee
 import matplotlib.pyplot as plt
 import numpy as np
 import json
+import argparse
 
 def visualize_grid(grid, title="Grid Visualization", str_filename="arcexample.png"):
     """
@@ -52,9 +53,16 @@ def plot_arc_tasks_from_file(str_json_filename):
 
 # Example usage:
 if __name__ == "__main__":
-    
-    plot_arc_tasks_from_file('arcdata/AboveBelow1.json')
 
+    
+    # plot_arc_tasks_from_file('arcdata/AboveBelow1.json')
+
+    # parse command line arguments
+    parser = argparse.ArgumentParser(description="Name of json file")
+    parser.add_argument('json_file', type=str, help="Path to json file")
+    args = parser.parse_args()
+
+    plot_arc_tasks_from_file(args.json_file)
     
     # TODO: pull in all tasks from ConceptARC
     # TODO: call 4o-mini, o3-mini, DeepSeek R1 on these tasks
