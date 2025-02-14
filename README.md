@@ -50,6 +50,8 @@ python opensource_llm.py
 
 `ARC_assignment.py`: Has a simple Python program to solve Abstraction and Reasoning Corpus (ARC) tasks
 
+`arcvis.py`: Python script to visualize ARC/ConceptARC tasks
+
 `basic_chatbot_SB.ipynb` : has the chatbot with multiple functionalities such as reading from a file of clinical cases and memory of past conversations
 
 
