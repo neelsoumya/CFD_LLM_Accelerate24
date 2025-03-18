@@ -30,10 +30,16 @@ huggingface-llm-project
    pip install -r requirements.txt
    ```
 
-3. **Run the application:**
+3. Huggingface credentials create and run
+
+   ```
+   huggingface-cli login
+   ``` 
+
+4. **Run the application:**
    You can start the application by running:
    ```
-   python src/app.py
+   python src/main_llama_scratch.py
    ```
 
 ## Usage
