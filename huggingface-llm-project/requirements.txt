@@ -6,3 +6,4 @@ torch
 fastapi
 uvicorn
 python-dotenv
+sentencepiece
