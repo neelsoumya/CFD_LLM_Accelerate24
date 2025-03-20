@@ -6,6 +6,7 @@ Functions:
 """
 
 import json
+import argparse
 
 def pretty_print_json(file_path):
     """
@@ -21,5 +22,12 @@ def pretty_print_json(file_path):
         data = json.load(file)
     print(json.dumps(data, indent=4, sort_keys=True))
 
-# Replace 'AboveBelow1.json' with your JSON file path
-pretty_print_json('AboveBelow1.json')
+
+if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser(description="Pretty print JSON data from a file.")
+    parser.add_argument('file_path', type=str, help="The path to the JSON file to be read.")
+    args = parser.parse_args()
+
+    pretty_print_json(args.file_path)
+
